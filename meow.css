@@ -1,0 +1,31 @@
+body {
+    display: block;
+    width: 970px;
+    margin: 0 auto;  
+    padding-top: 10px;
+    
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    display: inline-table;
+    border-collapse: collapse;
+    
+}
+
+table, th, td {
+    border: 1px solid black;
+    margin-bottom: 25px;
+   
+}
+
+td {
+    padding: 10px;
+}
+
+th {
+    height: 30px;
+    background-color: lightgreen;
+    font-size: 18px;
+}

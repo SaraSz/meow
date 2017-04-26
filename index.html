@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>Me and Meow!</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="meow.css">
+    <script src="meow.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAs1Wl6Ed1B2E8qrAGdRGVhcnE8isJ8SRk",
+        authDomain: "meow-d393f.firebaseapp.com",
+        databaseURL: "https://meow-d393f.firebaseio.com",
+        projectId: "meow-d393f",
+        storageBucket: "meow-d393f.appspot.com",
+        messagingSenderId: "587383622809"
+      };
+      firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    
+    
+    <input type ="text" id="addName" placeholder="Name">
+    <input type="text" id="addColor" placeholder="Color">
+    <input type="text" id="addBreed" placeholder="Breed">
+    <!--<input type ="file" id="addImg">-->
+    <button id="add">Add</button><br><br>
+
+    
+    <br><br>
+    
+    <table id ="tabell">
+    <thead class="thead-default">
+    <tr>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Breed</th>
+        <!--<th>Img</th>-->
+    </tr>
+        </thead>
+      <tbody id="table">
+    
+  </tbody>
+    </table>    
+
+</body>
