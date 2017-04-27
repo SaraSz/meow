@@ -39,7 +39,7 @@ function saveToFirebase(){
  function getAndWrite(){                           
     firebase.database().ref("cats/").on("value", function(snapshot) {
         let data = snapshot.val();
-        //totalCats = data.length;
+        totalCats = data.length;
         table.innerHTML = "";
         addProductToTable(data);
     })
