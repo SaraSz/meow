@@ -3,7 +3,6 @@
     <title>Me and Meow!</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="meow.css">
-    <script src="meow.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
     <script>
@@ -18,15 +17,16 @@
       };
       firebase.initializeApp(config);
     </script>
+    <script src="meow.js"></script>
 </head>
 
 <body>
     
-    
-    <input type ="text" id="addName" placeholder="Name">
+    <input type ="text" id="addYourName" placeholder="Your name">
+    <input type ="text" id="addCatName" placeholder="Catname">
     <input type="text" id="addColor" placeholder="Color">
     <input type="text" id="addBreed" placeholder="Breed">
-    <!--<input type ="file" id="addImg">-->
+    <input type="text" id="addImg" placeholder="Image URL">
     <button id="add">Add</button><br><br>
 
     
@@ -35,10 +35,11 @@
     <table id ="tabell">
     <thead class="thead-default">
     <tr>
-        <th>Name</th>
+        <th>Your name</th>
+        <th>Catname</th>
         <th>Color</th>
         <th>Breed</th>
-        <!--<th>Img</th>-->
+        <th>Img</th>
     </tr>
         </thead>
       <tbody id="table">

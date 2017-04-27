@@ -29,3 +29,12 @@ th {
     background-color: lightgreen;
     font-size: 18px;
 }
+
+td > img {
+    width: 90px;
+    height: 50px;
+}
+
+th:last-child {
+    width: 100px;
+}

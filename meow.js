@@ -1,7 +1,7 @@
 window.onload = function(){ "use strict";
 
-    
-let addName = document.getElementById("addName");
+let addYourName = document.getElementById("addYourName");    
+let addCatName = document.getElementById("addCatName");
 let addColor = document.getElementById("addColor");
 let addBreed = document.getElementById("addBreed");
 let addImg = document.getElementById("addImg");
@@ -22,18 +22,20 @@ getAndWrite();
                          
 function saveToFirebase(){ 
     let object = {
-        name: addName.value,
+        yourName: addYourName.value,
+        catName: addCatName.value,
         color: addColor.value,
         breed: addBreed.value,
-        //img: img,
+        img: addImg.value,
         id: totalCats
     }
     
     firebase.database().ref('cats/' + totalCats).set(object);
-    addName.value = ""; 
+    addYourName.value = "";
+    addCatName.value = ""; 
     addColor.value = ""; 
     addBreed.value = "";
-    //addImg.value = "";
+    addImg.value = "";
 };
                          
  function getAndWrite(){                           
@@ -48,17 +50,12 @@ function saveToFirebase(){
 function addProductToTable(data) { //Funktion som lägger till inputvalue i tabellen
     for (let object in data) {
     let tr = document.createElement("tr");
-    tr.innerHTML = "<td>" + data[object].name + "<td>" + data[object].color + "<td>" + data[object].breed;
+    tr.innerHTML = "<td>" + data[object].yourName + "<td>" + data[object].catName + "<td>" + data[object].color + "<td>" + data[object].breed + "<td>" + "<img src=" + data[object].img + ">";
     table.appendChild(tr);
     console.log("Tillagt i tabellen");
-    }
+        }
     
-};
-                         
- function addToTable(data){
-    let newTr = document.createElement("tr");
-    newTr.innerHTML = "<td>" + data.name + "<td>" + data.color + "<td>" + data.breed;
-    table.appendChild(newTr);
- }                        
+    };
+                           
     
 }
